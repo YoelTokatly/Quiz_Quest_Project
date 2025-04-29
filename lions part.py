@@ -5,8 +5,14 @@ def initialize_game():
     return players, scores, rounds
 
 def declare_winner(scores):
-    # Find the highest score
+    # Find the highest score among all players
     max_score = max(scores.values())
+    
+    # Create a list of all players who have the highest score
+    winners = [player for player, score in scores.items() if score == max_score]
+    
+    # Return the list of winners (could be one or multiple in case of a tie)
+    return winners
 
     # Identify the player with the highest score
     for player, score in scores.items():
@@ -17,3 +23,7 @@ def declare_winner(scores):
 def show_scores(scores):
     for player, score in scores.items():
         print(f"{player} has a score of {score}.")
+
+
+
+        
