@@ -2,7 +2,7 @@
 # Function: ask_question(player)
 # Part of Quiz Quest Project
 import random
-def ask_question(player, questions, score):
+def ask_question(player, questions, scores):
     category = input(f"{player}, choose a category: science, history, pop culture: ").lower()
  #if he choose an invalid category:
     if category not in questions:
