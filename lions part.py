@@ -12,3 +12,8 @@ def declare_winner(scores):
     for player, score in scores.items():
         if score == max_score:
             print(f"Congratulations, {player}! You won with a score of {score}!")
+
+    
+def show_scores(scores):
+    for player, score in scores.items():
+        print(f"{player} has a score of {score}.")
